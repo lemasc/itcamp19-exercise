@@ -9,8 +9,9 @@ import {
   Image,
   Alert,
 } from "react-native";
+import { N } from "../navigation";
 
-function LoginScreen({ navigation }) {
+function LoginScreen({ navigation }: N<"Home">) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 

@@ -7,8 +7,9 @@ import {
   Button,
   ScrollView,
 } from "react-native";
+import { N } from "../navigation";
 
-function HomeScreen({ navigation }) {
+function HomeScreen({ navigation }: N<"HomePage">) {
   return (
     <ScrollView style={{ padding: 18 }}>
       <View>

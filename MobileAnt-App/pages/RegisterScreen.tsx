@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Button, TextInput } from "react-native";
+import { N } from "../navigation";
 
-function RegisterScreen({ navigation }) {
+function RegisterScreen({ navigation }: N<"Register">) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
