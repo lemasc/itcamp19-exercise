@@ -1,38 +1,42 @@
-import { Button } from "react-native";
-import { Text, View, ScrollView, StyleSheet, TextInput } from "react-native";
+import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  Button,
+  ScrollView,
+} from "react-native";
 
-export default function HomeScreen() {
+function HomeScreen({ navigation }) {
   return (
-    <ScrollView
-      style={{
-        padding: 18,
-      }}
-    >
-      <Text style={styles.headerTitle}>ITCamp To-Do Lists</Text>
-      <View
-        style={{
-          borderRadius: 6,
-          borderWidth: 1,
-          paddingHorizontal: 12,
-          borderColor: "lightgray",
-          backgroundColor: "white",
-        }}
-      >
-        <Text style={styles.inputLabel}>Name</Text>
-        <TextInput style={styles.input} />
-        <Text style={styles.inputLabel}>Detail</Text>
-        <TextInput
-          style={{ ...styles.input, height: 100 }}
-          multiline
-          numberOfLines={6}
-        />
-        <View style={{ paddingVertical: 15 }}>
-          <Button
-            title="Add"
-            onPress={() => {
-              console.log("ADD");
-            }}
+    <ScrollView style={{ padding: 18 }}>
+      <View>
+        <Text style={styles.headerTitle}>ITCamp To-Do Lists</Text>
+
+        <View
+          style={{
+            borderRadius: 6,
+            borderWidth: 1,
+            marginTop: 12,
+            paddingHorizontal: 12,
+            borderColor: "lightgray",
+            backgroundColor: "white",
+          }}
+        >
+          <Text style={styles.inputLabel}>Title</Text>
+          <TextInput style={styles.textInput} />
+
+          <Text style={styles.inputLabel}>Content</Text>
+          <TextInput
+            style={{ ...styles.textInput, height: 100 }}
+            multiline={true}
+            numberOfLines={6}
           />
+
+          <View style={{ padding: 12 }}>
+            <Button title="Create a new to-do" />
+          </View>
         </View>
       </View>
     </ScrollView>
@@ -42,18 +46,25 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   headerTitle: {
     textAlign: "center",
+    fontSize: 18,
     fontWeight: "bold",
-    marginBottom: 12,
-    fontSize: 24,
+    marginBottom: 6,
   },
-  input: {
+  textInput: {
+    height: 40,
+    margin: 12,
     borderWidth: 1,
     borderColor: "lightgray",
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 5,
+    padding: 10,
+    backgroundColor: "white",
   },
   inputLabel: {
-    paddingVertical: 10,
+    padding: 12,
+    paddingBottom: 0,
   },
 });
+
+export default HomeScreen;
