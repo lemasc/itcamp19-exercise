@@ -10,10 +10,26 @@ import {
   Alert,
 } from "react-native";
 import { N } from "../navigation";
+import users from "../users";
 
 function LoginScreen({ navigation }: N<"Home">) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const handleLogin = () => {
+    if (!username || !password) {
+      Alert.alert("", "Username or Password must not be empty");
+      return;
+    }
+    const loginResult = users.filter(
+      (user) => user.username === username && user.password === password
+    );
+
+    if (loginResult.length > 0) {
+      navigation.navigate("HomePage");
+    } else {
+      Alert.alert("", "Username or Password is incorrect. Please login again!");
+    }
+  };
 
   useEffect(() => {
     Alert.alert(
@@ -63,10 +79,7 @@ function LoginScreen({ navigation }: N<"Home">) {
         />
 
         <View style={{ padding: 12 }}>
-          <Button
-            title="LOGIN"
-            onPress={() => navigation.navigate("HomePage")}
-          />
+          <Button title="LOGIN" onPress={handleLogin} />
         </View>
 
         <Text

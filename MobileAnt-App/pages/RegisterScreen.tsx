@@ -1,10 +1,27 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Button, TextInput } from "react-native";
+import { View, Text, StyleSheet, Button, TextInput, Alert } from "react-native";
 import { N } from "../navigation";
+import users from "../users";
 
 function RegisterScreen({ navigation }: N<"Register">) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleRegister = () => {
+    if (!username || !password) {
+      Alert.alert("", "Username or password must not be empty");
+      return;
+    }
+
+    const result = users.some((user) => user.username === username);
+    if (result) {
+      Alert.alert("", "This username is already exists.");
+    }
+
+    Alert.alert("", "Register successfully, please login again");
+    users.push({ username, password });
+    navigation.navigate("Home");
+  };
 
   return (
     <View style={{ padding: 18, flex: 1, justifyContent: "center" }}>
@@ -29,7 +46,7 @@ function RegisterScreen({ navigation }: N<"Register">) {
         />
 
         <View style={{ padding: 12 }}>
-          <Button title="Register" />
+          <Button title="Register" onPress={handleRegister} />
         </View>
 
         <Text
