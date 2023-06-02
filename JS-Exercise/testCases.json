@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Test Case 2",
+    "input": ["itcamp", "itcamp19"],
+    "type": "signIn",
+    "expect": true
+  },
+  {
+    "name": "Test Case 3",
+    "input": [
+      "4LmA4LiB4LmI4LiH4Lih4Liy4LiB4LiZ4LmJ4Lit4LiH4Lij4Lix4LiB4Lif4Lit4Lil4Lie4Li14LmI4Lih4Liy4Lir4LiZ4LmI4Lit4LiiIGlnOiBwb29tc19wcA",
+      "an"
+    ],
+    "type": "signUp",
+    "expect": false
+  },
+  {
+    "name": "Test Case 4",
+    "input": [
+      "4LmA4LiB4LmI4LiH4Lih4Liy4LiB4LiZ4LmJ4Lit4LiH4Lij4Lix4LiB4Lif4Lit4Lil4Lie4Li14LmI4Lih4Liy4Lir4LiZ4LmI4Lit4LiiIGlnOiBwb29tc19wcA",
+      "4LmA4Lij4Li14Lii4LiB4Lie4Li14LmI4Lih4Liy4LmB4Lil4LmJ4Lin4Lie4Li54LiU4Lin4LmI4Liy4Lii4Liy4Lii4LiB4Li04LiZ4Lil4Liz4LmE4Lii4LiZ4LmJ4Liz4Lil4Liy4Lii4Lii4Liy4Lii4LmE4Lir4Lil4Lii4LmJ4Lit4Lii4LmD4Lir4LmJ4Liq4Li04LiX4LiY4Li04LiE4LiZ4LmB4Lij4LiB4LiX4Li14LmI4Lie4Li54LiU4LmA4LiX4LmI4Liy4LiZ4Lix4LmJ4LiZ"
+    ],
+    "type": "signUp",
+    "expect": true
+  },
+  {
+    "name": "Test Case 5",
+    "input": [
+      "4LmA4LiB4LmI4LiH4Lih4Liy4LiB4LiZ4LmJ4Lit4LiH4Lij4Lix4LiB4Lif4Lit4Lil4Lie4Li14LmI4Lih4Liy4Lir4LiZ4LmI4Lit4LiiIGlnOiBwb29tc19wcA",
+      "4LmA4Lij4Li14Lii4LiB4Lie4Li14LmI4Lih4Liy4LmB4Lil4LmJ4Lin4Lie4Li54LiU4Lin4LmI4Liy4Lii4Liy4Lii4LiB4Li04LiZ4Lil4Liz4LmE4Lii4LiZ4LmJ4Liz4Lil4Liy4Lii4Lii4Liy4Lii4LmE4Lir4Lil4Lii4LmJ4Lit4Lii4LmD4Lir4LmJ4Liq4Li04LiX4LiY4Li04LiE4LiZ4LmB4Lij4LiB4LiX4Li14LmI4Lie4Li54LiU4LmA4LiX4LmI4Liy4LiZ4Lix4LmJ4LiZ"
+    ],
+    "type": "signUp",
+    "expect": false
+  },
+  {
+    "name": "Test Case 6",
+    "input": [
+      "4LmA4LiB4LmI4LiH4Lih4Liy4LiB4LiZ4LmJ4Lit4LiH4Lij4Lix4LiB4LIf4Lit4Lil4Lie4Li14LmI4Lih4Liy4Lir4LiZ4LmI4Lit4LiiIGlnOiBwb29tc19wcA",
+      "ขอตังจากพี่วินได้นะน้อง"
+    ],
+    "type": "signUp",
+    "expect": false
+  },
+  {
+    "name": "Test Case 7",
+    "input": [
+      "4LmA4LiB4LmI4LiH4Lih4Liy4LiB4LiZ4LmJ4Lit4LiH4Lij4Lix4LiB4LIf4Lit4Lil4Lie4Li14LmI4Lih4Liy4Lir4LiZ4LmI4Lit4LiiIGlnOiBwb29tc19wcA",
+      "ขอตังจากพี่วินได้นะน้อง"
+    ],
+    "type": "signIn",
+    "expect": false
+  },
+  {
+    "name": "Test Case 8",
+    "input": [
+      "4LmA4LiB4LmI4LiH4Lih4Liy4LiB4LiZ4LmJ4Lit4LiH4Lij4Lix4LiB4LIf4Lit4Lil4Lie4Li14LmI4Lih4Liy4Lir4LiZ4LmI4Lit4LiiIGlnOiBwb29tc19wcA",
+      "4LmA4Lij4Li14Lii4LiB4Lie4Li14LmI4Lih4Liy4LmB4Lil4LmJ4Lin4Lie4Li54LiU4Lin4LmI4Liy4Lii4Liy4Lii4LiB4Li04LiZ4Lil4Liz4LmE4Lii4LiZ4LmJ4Liz4Lil4Liy4Lii4Lii4Liy4Lii4LmE4Lir4Lil4Lii4LmJ4Lit4Lii4LmD4Lir4LmJ4Liq4Li04LiX4LiY4Li04LiE4LiZ4LmB4Lij4LiB4LiX4Li14LmI4Lie4Li54LiU4LmA4LiX4LmI4Liy4LiZ4Lix4LmJ4LiZ"
+    ],
+    "type": "signIn",
+    "expect": true
+  },
+  {
+    "name": "Test Case 9",
+    "input": ["itcamp19", "ant"],
+    "type": "signUp",
+    "expect": true
+  }
+]
