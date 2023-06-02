@@ -55,7 +55,20 @@ function HomeScreen({ navigation }: N<"HomePage">) {
       targetItem.name = newName || selectedToDoName;
       targetItem.content = newContent || selectedToDoContent;
       tempItems[targetIndex] = targetItem;
+
+      /*
+      const updatedItems = items.map((todo) => {
+        console.log(todo.id, selectedToDoId);
+        if (todo.id === selectedToDoId) {
+          const updated = { ...todo };
+          updated.name = newName || selectedToDoName;
+          updated.content = newContent || selectedToDoContent;
+          return updated;
+        }
+        return todo;
+      });*/
       setShowDetailDialog(false);
+      setItems(tempItems);
     };
 
     const handleDelete = () => {
